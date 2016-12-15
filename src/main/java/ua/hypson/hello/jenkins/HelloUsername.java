@@ -6,6 +6,10 @@ package ua.hypson.hello.jenkins;
 public class HelloUsername {
 
     public String hello(String username) {
-        return "Hello, " + username + "!!";
+        if(!username.isEmpty()) {
+            return "Hello, " + username + "!";
+        } else {
+            return "Hello, World!";
+        }
     }
 }

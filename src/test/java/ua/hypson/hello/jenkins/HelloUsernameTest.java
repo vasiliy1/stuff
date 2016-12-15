@@ -10,8 +10,14 @@ import static org.junit.Assert.assertEquals;
 public class HelloUsernameTest {
 
     @Test
-    public void helloTest() {
+    public void testHelloWithNotEmptyString() {
         HelloUsername helloUsername = new HelloUsername();
         assertEquals("Hello, John!", helloUsername.hello("John"));
+    }
+
+    @Test
+    public void testHelloWithEmptyString() {
+        HelloUsername helloUsername = new HelloUsername();
+        assertEquals("Hello, World!", helloUsername.hello(""));
     }
 }
